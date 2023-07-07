@@ -6,72 +6,67 @@ import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import { LoadingButton } from "@mui/lab";
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import banner from "../public/images/db.jpg";
 import Image from "next/image";
 
 const Header = () => {
+  const EMPTY_USERDATA = {
+    userName: "",
+    phoneNo: "",
+    email: "",
+  };
+  const [userData, setUserData] = useState(EMPTY_USERDATA);
 
-    const EMPTY_USERDATA = {
-        userName: "",
-        phoneNo: "",
-        email: "",
-      };
-    const [userData, setUserData] = useState(EMPTY_USERDATA);
-    
-    return (
-        <Grid
+  return (
+    <Grid
+      container
+      item
+      xs={12}
+      sx={{
+        display: "flex",
+        alignContent: "flex-start",
+        marginTop: "4%",
+      }}
+    >
+      <Grid
+        item
+        md={8}
+        xs={12}
+        style={{ position: "relative", height: "600px" }}
+      >
+        <Image fill src={banner} alt="banner image" />
+      </Grid>
+
+      <Grid
+        id="checkme"
         container
         item
+        md={4}
         xs={12}
         sx={{
-            display:'flex',
-            alignContent:'flex-start',
-            marginTop:"4%"
+          backgroundColor: "#460405",
+          backgroundImage: "none",
+          display: "flex",
+          alignContent: "flex-start",
+          justifyContent: "center",
+          paddingBottom: "30px",
         }}
-        >
-            <Grid
-            item
-            md={8}
-            xs={12}
-            style={{position:"relative", height:"600px"}}
-            >
-                <Image
-                    fill 
-                    src={banner}
-                    alt='banner image'
-                />
-            </Grid>
-            
-            <Grid
-            id="checkme"
-            container
-            item
-            md={4}
-            xs={12}
+      >
+        <Grid item xs={12}>
+          <Typography
+            component="h1"
             sx={{
-                backgroundColor: "#460405",
-                backgroundImage: "none",
-                display: "flex",
-                alignContent: "flex-start",
-                justifyContent: "center",
-                paddingBottom:"30px"
+              textAlign: "center",
+              padding: "10px 0",
+              fontSize: { xs: "28px", md: "32px" },
+              fontWeight: "bold",
+              color: "#ffffff",
             }}
-            >
-      <Grid item xs={12}>
-        <Typography
-          component="h1"
-          sx={{
-            textAlign: "center",
-            padding: "10px 0",
-            fontSize: { xs: "28px", md: "32px" },
-            fontWeight: "bold",
-            color: "#ffffff",
-          }}
-        >
-          Enquire Now
-        </Typography>
-      </Grid>
+          >
+            Enquire Now
+          </Typography>
+        </Grid>
         <Grid
           container
           item
@@ -82,7 +77,7 @@ const Header = () => {
             backgroundImage: "none",
             borderRadius: "5px",
             padding: "20px",
-            marginTop:"20px"
+            marginTop: "20px",
           }}
         >
           <Grid item xs={12}>
@@ -230,12 +225,18 @@ const Header = () => {
               Submit
             </LoadingButton>
           </Grid>
+          <Grid
+            item
+            sx={{paddingY:'20px', paddingX:'25%'}}
+            href="tel:+918588073636"
+          >
+            <Typography sx={{ color: "#000000", textAlign:'center',borderBottom: "2px solid #ccc", fontWeight:'lighter' }}>For More Details</Typography>
+            <Typography sx={{ color: "#000000", textAlign:'center', paddingTop:'10px', fontSize:"25px"}}>+918588073636</Typography>
+          </Grid>
         </Grid>
-
-        </Grid>
-
+      </Grid>
     </Grid>
-    )
-}
+  );
+};
 
 export default Header;

@@ -5,7 +5,9 @@ import { Grid } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import About from "../components/About";
+import Location from "../components/Location";
 import Amenities from "../components/Amenities";
+import Experience from "../components/Experience";
 
 export default function Home() {
   return (
@@ -18,9 +20,11 @@ export default function Home() {
       </Head>
       <Grid container>
         <Navbar />
-        <Header/>
-        <About/>
-        <Amenities/>
+        <Header />
+        <About />
+        <Location />
+        <Amenities />
+        <Experience />
       </Grid>
     </>
   );

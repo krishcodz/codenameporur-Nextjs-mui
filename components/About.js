@@ -13,6 +13,7 @@ export default function About() {
         background: "white",
         color: "black",
         flexDirection: "row",
+        paddingY:"70px"
       }}
     >
       <Grid
@@ -22,17 +23,17 @@ export default function About() {
       >
           <Typography sx={{
             textAlign: "center",
-              fontSize: "32px",
-              borderBottom: "2px solid #3c3c3c",
-              letterSpacing: "6px",
+              fontSize: "22px",
+              borderBottom: "2px solid #ccc",
+              letterSpacing: "3px",
               fontWeight: "bolder",
               color: "#3c3c3c",
           }}>
-            About Us
+            ABOUT PROJECT
           </Typography>
       </Grid>
       <Grid item xs={9}>
-        <Typography paragraph={true} sx={{ fontFamily: "unset" }}>
+        <Typography paragraph={true} sx={{fontSize:'14px'}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper
@@ -40,7 +41,7 @@ export default function About() {
           pellentesque. Nam aliquam sem et tortor consequat id porta. Dolor sed
           viverra ipsum nunc aliquet bibendum.
         </Typography>
-        <Typography paragraph={true} sx={{ fontFamily: "unset" }}>
+        <Typography paragraph={true} sx={{fontSize:'14px'}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper

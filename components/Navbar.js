@@ -121,25 +121,25 @@ const Navbar = () => {
             <Box
               sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
             >
-              <Link href="/amenities" passHref style={{marginRight:15}}>
+              <Link href="/amenities" passHref style={{ marginRight: 15 }}>
                 <IconButton color="inherit" aria-label="amenities">
                   <SportsGolfIcon />
                 </IconButton>
                 Amenities
               </Link>
-              <Link href="/gallery" passHref style={{marginRight:15}}>
+              <Link href="/gallery" passHref style={{ marginRight: 15 }}>
                 <IconButton color="inherit" aria-label="gallery">
                   <CollectionsIcon />
                 </IconButton>
                 Gallery
               </Link>
-              <Link href="#about" passHref style={{marginRight:15}}>
+              <Link href="#about" passHref style={{ marginRight: 15 }}>
                 <IconButton color="inherit" aria-label="about">
                   <InfoIcon />
                 </IconButton>
                 About
               </Link>
-              <Link href="/contact" passHref style={{marginRight:15}}>
+              <Link href="/contact" passHref style={{ marginRight: 15 }}>
                 <IconButton color="inherit" aria-label="contact">
                   <MailIcon />
                 </IconButton>
@@ -148,9 +148,13 @@ const Navbar = () => {
               <Button
                 variant="contained"
                 startIcon={<DownloadIcon />}
-                sx={{ marginLeft: 2, background: '#FBB70F', ":hover": {
-                  background: "#FF9900",
-                }}}
+                sx={{
+                  marginLeft: 2,
+                  background: "#FBB70F",
+                  ":hover": {
+                    background: "#FF9900",
+                  },
+                }}
               >
                 Enquire
               </Button>

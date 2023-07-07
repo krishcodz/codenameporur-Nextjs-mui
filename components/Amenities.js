@@ -1,314 +1,222 @@
-import amenitiesImg from "../public/images/aminities.jpg";
-import amenitiesImgXs from "../public/images/aminities_xs.jpg";
-import offerImg from "../public/images/tag.webp";
-import { Box, Grid, Typography } from "@mui/material";
-import { Button } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+import lifestyle1 from "../public/images/life-style-1.webp";
+import lifestyle2 from "../public/images/life-style-2.webp";
+import lifestyle3 from "../public/images/life-style-3.webp";
+import lifestyle4 from "../public/images/life-style-4.webp";
+import DownloadIcon from "@mui/icons-material/Download";
 
 export default function Amenities() {
-
-    const StyledTableRow = styled(TableRow)(({ theme }) => ({
-        "&:nth-of-type(odd)": {
-          backgroundColor: "#DFF0D8",
-        },
-      }));
-    
-      function createData(config, price, emi) {
-        return { config, price, emi };
-      }
-      
-      const emiData = [
-        createData("2 BHK - R", 43.17, "28,000"),
-        createData("2 BHK - L", 49.27, "32,000"),
-        createData("3 BHK", 50.93, "33,000"),
-      ];
-    
-    return (
-        <>
+  return (
+    <Grid
+      container
+      item
+      sx={{
+        paddingY: "70px",
+        paddingX: "40px",
+        backgroundColor: "white",
+        color: "black",
+      }}
+    >
       <Grid
-        container
         item
         xs={12}
-        style={{ display: "flex", justifyContent: "center", padding: "0 15px", backgroundColor:"white" }}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
       >
-        <Grid
-          item
-          xs={10}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <Typography
-            component="h1"
-            sx={{
-              textAlign: "center",
-              fontSize: "32px",
-              borderBottom: "2px solid #3c3c3c",
-              fontWeight: "bolder",
-              letterSpacing: "6px",
-              color: "#3c3c3c",
-            }}
-          >
-          Amenities
-          </Typography>
-        </Grid>
-        <Grid item xs={11} sm={10}>
-          <Typography
-            component="h2"
-            style={{
-              textAlign: "center",
-              margin: "20px 0 0 0",
-              fontSize: "20px",
-              fontWeight: "bold",
-              color: "#3c3c3c",
-            }}
-          >
-          120+ Next-Gen Amenities
-          </Typography>
-        </Grid>
-        <Grid item xs={11} sm={10}>
-          <Typography
-            component="h2"
-            style={{
-              textAlign: "center",
-              margin: "20px 0 10px",
-              fontSize: "18px",
-              color: "#595959",
-            }}
-          >
-          The best in class amenities for a balanced life
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={12}
+        <Typography
           sx={{
-            padding: "10px 10px",
-            display: { xs: "none", md: "flex", justifyContent:"center" },
+            textAlign: "center",
+            fontSize: "22px",
+            borderBottom: "2px solid #ccc",
+            width: "fit-content",
+            letterSpacing: "3px",
+            fontWeight: "bolder",
+            color: "#3c3c3c",
           }}
         >
-          <Image
-            style={{
-              width: "60%",
-              height: "auto",
-            }}
-            src={amenitiesImg}
-            alt="amenities_img"
-            sizes="100vw"
-          />
-        </Grid>
-        <Grid
-          item
-          xs={12}
+          SEMMA LIFESTYLE
+        </Typography>
+        <Typography
+          xs={4}
           sx={{
-            padding: "10px 0",
-            display: { xs: "flex", md: "none", justifyContent:"center" },
+            paddingTop: "20px",
+            textAlign: "center",
+            fontSize: "14px",
+            color: "#6B6B6B",
           }}
         >
-          <Image
-            style={{
-              width: "60%",
-              height: "auto",
-            }}
-            src={amenitiesImgXs}
-            alt="amenities_img"
-            sizes="100vw"
-          />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={10}
-          md={8}
-          sx={{
-            padding: "0 10px",
-            paddingTop:"50px",
-            display:"flex",
-            justifyContent:"center"
-          }}
-        >
-          <Image
-            style={{
-              width: "60%",
-              height: "auto",
-            }}
-            src={offerImg}
-            alt="amenities_img"
-            sizes="100vw"
-          />
-        </Grid>
-        <Grid item xs={12} sm={10} md={8} sx={{paddingBottom:"30px"}}>
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 300 }} aria-label="customized table">
-              <TableHead>
-                <TableRow>
-                  <TableCell
-                    style={{
-                      background: "#333333",
-                      color: "#ffffff",
-                      border: "1px solid #ddd",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Configuration
-                  </TableCell>
-                  <TableCell
-                    style={{
-                      background: "#333333",
-                      color: "#ffffff",
-                      border: "1px solid #ddd",
-                      fontWeight: "bold",
-                    }}
-                    align="center"
-                  >
-                    Price
-                  </TableCell>
-                  <TableCell
-                    style={{
-                      background: "#333333",
-                      color: "#ffffff",
-                      border: "1px solid #ddd",
-                      fontWeight: "bold",
-                    }}
-                    align="center"
-                  >
-                    EMI
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {(emiData || []).map((item) => (
-                  <StyledTableRow key={item.config}>
-                    <TableCell
-                      style={{ border: "1px solid #ddd" }}
-                      component="th"
-                      scope="row"
-                    >
-                      {item.config}
-                    </TableCell>
-                    <TableCell
-                      style={{ border: "1px solid #ddd" }}
-                      align="center"
-                    >
-                      {`₹ ${item.price} Lacs`}
-                    </TableCell>
-                    <TableCell
-                      style={{ border: "1px solid #ddd" }}
-                      align="center"
-                    >
-                      {`₹ ${item.emi}`}
-                    </TableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Grid>
+          Urbanrise CodeName New Porur offers the proud Homeowners a dream
+          living with an array of amazing amenities
+        </Typography>
       </Grid>
-
-      <Grid container item xs={12}>
+      <Grid item container xs={12} sx={{ paddingY: "40px", paddingX: "80px" }}>
         <Grid
+          container
           item
           xs={12}
-          sx={{
-            position: "relative",
-            height: { xs: "300px", md: "350px" },
-            width: "100%",
-            overflow: "hidden",
-          }}
+          md={3}
+          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
         >
-          <Image
-            fill
-            alt="animated_gif"
-            src="https://www.jubileeresidences.com/promos/google/aug-dsp-2020/images/book_site_visit.gif"
-            sizes="100vw"
-          />
           <Grid
-            container
-            item
             xs={12}
-            style={{
-              position: "absolute",
+            item
+            sx={{
+              display: "relative",
               width: "100%",
-              height: "100%",
-              top: 0,
-              right: 0,
-              background: "rgba(255, 193, 7, 0.32941176470588235)",
-              alignContent: "flex-start",
+              height: "auto",
             }}
           >
-            <Grid item xs={12}>
-              <Typography
-                component="h1"
-                style={{
-                  textAlign: "center",
-                  padding: "20px 0 10px 0",
-                  fontSize: "25px",
-                  fontWeight: "bold",
-                }}
-              >
-              Book a FREE Site visit
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography
-                component="h2"
-                style={{
-                  textAlign: "center",
-                  marginBottom: "10px",
-                  fontSize: "14px",
-                  color: "#595959",
-                }}
-              >
-              Hurry up Few units only available...
-              </Typography>
-            </Grid>
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              src={lifestyle1}
+              alt="lifestyle"
+              sizes="100wv"
+            />
+          </Grid>
+          <Grid xs={12} item>
+            <Typography textAlign="center">RETAIL ARCADE</Typography>
+          </Grid>
+          <Grid xs={12} items>
+            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
+              A retail arcade caters to the day to day needs of the residents of
+              the community
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={3}
+          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+        >
+          <Grid item container>
             <Grid
-              item
               xs={12}
-              style={{ display: "flex", justifyContent: "center" }}
+              item
+              sx={{
+                display: "relative",
+                width: "100%",
+                height: "auto",
+              }}
             >
-            <Button
-                variant="contained"
-                sx={{
-                  background: "#9BA11E",
-                  borderRadius: "20px",
-                  fontSize: "14px",
-                  color: "#000000",
-                  textTransform: "capitalize",
-                  fontWeight: "bold",
-                  height: "40px",
-                  display: { xs: "none", sm: "flex" },
-                  ':hover' : {background: '#06c910',}
+              <Image
+                style={{
+                  width: "100%",
+                  height: "auto",
                 }}
-              >
-                Book Now
-              </Button>
-              <Button
-                variant="contained"
-                sx={{
-                  background: "#9BA11E",
-                  borderRadius: "20px",
-                  fontSize: "14px",
-                  color: "#000000",
-                  textTransform: "capitalize",
-                  fontWeight: "bold",
-                  height: "40px",
-                  display: { xs: "flex", sm: "none" },
-                }}
-              >
-                Book Now
-              </Button>
+                src={lifestyle2}
+                alt="lifestyle"
+                sizes="100wv"
+              />
             </Grid>
+            <Grid xs={12} item>
+              <Typography textAlign="center">CENTRAL PARK</Typography>
+            </Grid>
+          </Grid>
+          <Grid xs={12} items>
+            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
+              A lush green Central Park equipped with beautiful landscaped
+              lawns.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={3}
+          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+        >
+          <Grid
+            xs={12}
+            item
+            sx={{
+              display: "relative",
+              width: "100%",
+              height: "auto",
+            }}
+          >
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              src={lifestyle3}
+              alt="lifestyle"
+              sizes="100wv"
+            />
+          </Grid>
+          <Grid xs={12} item>
+            <Typography textAlign="center">URBANRISE GENIUS</Typography>
+          </Grid>
+          <Grid xs={12} items>
+            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
+              Urbanrise Genius, offers coaching classes for academics and
+              extracurricular activities.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={3}
+          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+        >
+          <Grid
+            xs={12}
+            item
+            sx={{
+              display: "relative",
+              width: "100%",
+              height: "auto",
+            }}
+          >
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              src={lifestyle4}
+              alt="lifestyle"
+              sizes="100wv"
+            />
+          </Grid>
+          <Grid xs={12} item>
+            <Typography textAlign="center">CBSE SCHOOL</Typography>
+          </Grid>
+          <Grid xs={12} items>
+            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
+              Reputed CBSE school within the campus brings quality education at
+              doorstep.
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
-    </>
-    );
+      <Grid container item display="flex" justifyContent="center">
+        <Grid item>
+          <Button
+            startIcon={<DownloadIcon />}
+            sx={{
+              color: "white",
+              backgroundColor: "#FBB70F",
+              paddingX: "70px",
+              ":hover": {
+                backgroundColor: "#FF9900",
+              },
+              borderRadius: "30px",
+            }}
+          >
+            Enquire Now
+          </Button>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
 }
