@@ -55,6 +55,7 @@ const Header = () => {
                 display: "flex",
                 alignContent: "flex-start",
                 justifyContent: "center",
+                paddingBottom:"30px"
             }}
             >
       <Grid item xs={12}>
@@ -81,6 +82,7 @@ const Header = () => {
             backgroundImage: "none",
             borderRadius: "5px",
             padding: "20px",
+            marginTop:"20px"
           }}
         >
           <Grid item xs={12}>
