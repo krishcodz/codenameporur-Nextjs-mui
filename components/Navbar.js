@@ -150,7 +150,6 @@ const Navbar = () => {
                 startIcon={<DownloadIcon />}
                 sx={{ marginLeft: 2, background: '#FBB70F', ":hover": {
                   background: "#FF9900",
-                  borderRadius:130,
                 }}}
               >
                 Enquire
