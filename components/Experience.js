@@ -9,16 +9,23 @@ export default function Experience() {
       sx={{
         backgroundColor: "#022546",
         color: "white",
-        paddingY: "40px",
-        paddingX: "180px",
+        padding: "40px 80px",
       }}
     >
       <Grid
         container
         item
-        xs={4}
+        md={4}
+        xs={12}
         flexDirection="column"
-        alignItems="flex-start"
+        sx={{
+          alignItems: {
+            xs: "center",
+            md: "flex-start",
+          },
+          paddingX: { xs: "0px", md: "20px" },
+          paddingY: { xs: "40px", md: "0px" },
+        }}
       >
         <Typography sx={{ fontSize: "40px" }}>Experience</Typography>
         <Typography sx={{ color: "#FBB70F", fontSize: "30px" }}>
@@ -32,22 +39,30 @@ export default function Experience() {
       <Grid
         container
         item
-        xs={4}
-        flexDirection="column"
-        alignItems="center"
-        sx={{ paddingRight: "60px", paddingLeft: "30px" }}
+        xs={12}
+        md={4}
+        justifyContent="center"
+        sx={{ paddingY: { xs: "10px", md: "0px" } }}
       >
-        <Grid item width="100%" sx={{ paddingBottom: "60px" }}>
+        <Grid
+          item
+          width="100%"
+          xs={10}
+          sx={{ paddingBottom: { xs: "20px", md: "60px" } }}
+        >
           <TextField
             fullWidth
             id="outlined-basic"
             label="Enter Your Full Name"
             variant="outlined"
             type="text"
-            sx={{ backgroundColor: "white", borderRadius: "4px" }}
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "4px",
+            }}
           />
         </Grid>
-        <Grid item width="100%">
+        <Grid item xs={10} width="100%">
           <TextField
             fullWidth
             id="outlined-basic"
@@ -61,12 +76,17 @@ export default function Experience() {
       <Grid
         container
         item
-        xs={4}
-        flexDirection="column"
-        alignItems="center"
-        sx={{ paddingRight: "60px" }}
+        xs={12}
+        md={4}
+        justifyContent="center"
+        sx={{ paddingY: { xs: "10px", md: "0px" } }}
       >
-        <Grid item width="100%" sx={{ paddingBottom: "80px" }}>
+        <Grid
+          item
+          xs={10}
+          width="100%"
+          sx={{ paddingBottom: { xs: "30px", md: "80px" } }}
+        >
           <TextField
             fullWidth
             id="outlined-basic"
@@ -76,13 +96,13 @@ export default function Experience() {
             sx={{ backgroundColor: "white", borderRadius: "4px" }}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs={10} width="100%" display="relative">
           <Button
             startIcon={<DownloadIcon />}
             sx={{
               background: "#FBB70F",
-              paddingX: "120px",
               color: "white",
+              width: "100%",
               ":hover": {
                 background: "#FF9900",
               },
