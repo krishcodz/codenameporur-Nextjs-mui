@@ -33,7 +33,7 @@ const Header = () => {
         item
         md={8}
         xs={12}
-        style={{ position: "relative", height: "600px" }}
+        sx={{ position: "relative", height: { xs: "800px", md: "600px" } }}
       >
         <Image fill src={banner} alt="banner image" />
       </Grid>
@@ -227,11 +227,29 @@ const Header = () => {
           </Grid>
           <Grid
             item
-            sx={{paddingY:'20px', paddingX:'25%'}}
+            sx={{ paddingY: "20px", paddingX: "25%" }}
             href="tel:+918588073636"
           >
-            <Typography sx={{ color: "#000000", textAlign:'center',borderBottom: "2px solid #ccc", fontWeight:'lighter' }}>For More Details</Typography>
-            <Typography sx={{ color: "#000000", textAlign:'center', paddingTop:'10px', fontSize:"25px"}}>+918588073636</Typography>
+            <Typography
+              sx={{
+                color: "#000000",
+                textAlign: "center",
+                borderBottom: "2px solid #ccc",
+                fontWeight: "lighter",
+              }}
+            >
+              For More Details
+            </Typography>
+            <Typography
+              sx={{
+                color: "#000000",
+                textAlign: "center",
+                paddingTop: "10px",
+                fontSize: "25px",
+              }}
+            >
+              +918588073636
+            </Typography>
           </Grid>
         </Grid>
       </Grid>

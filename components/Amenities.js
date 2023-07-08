@@ -61,41 +61,10 @@ export default function Amenities() {
         >
           <Grid
             xs={12}
+            container
             item
-            sx={{
-              display: "relative",
-              width: "100%",
-              height: "auto",
-            }}
+            sx={{ borderBottom: "1px solid #f5f4f4" }}
           >
-            <Image
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-              src={lifestyle1}
-              alt="lifestyle"
-              sizes="100wv"
-            />
-          </Grid>
-          <Grid xs={12} item>
-            <Typography textAlign="center">RETAIL ARCADE</Typography>
-          </Grid>
-          <Grid xs={12} items>
-            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
-              A retail arcade caters to the day to day needs of the residents of
-              the community
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          item
-          xs={12}
-          md={3}
-          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
-        >
-          <Grid item container>
             <Grid
               xs={12}
               item
@@ -110,16 +79,61 @@ export default function Amenities() {
                   width: "100%",
                   height: "auto",
                 }}
-                src={lifestyle2}
+                src={lifestyle1}
                 alt="lifestyle"
                 sizes="100wv"
               />
             </Grid>
             <Grid xs={12} item>
-              <Typography textAlign="center">CENTRAL PARK</Typography>
+              <Typography textAlign="center">RETAIL ARCADE</Typography>
             </Grid>
           </Grid>
-          <Grid xs={12} items>
+          <Grid xs={12} item>
+            <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
+              A retail arcade caters to the day to day needs of the residents of
+              the community
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={3}
+          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+        >
+          <Grid
+            xs={12}
+            container
+            item
+            sx={{ borderBottom: "1px solid #f5f4f4" }}
+          >
+            <Grid item container>
+              <Grid
+                xs={12}
+                item
+                sx={{
+                  display: "relative",
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                <Image
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src={lifestyle2}
+                  alt="lifestyle"
+                  sizes="100wv"
+                />
+              </Grid>
+              <Grid xs={12} item>
+                <Typography textAlign="center">CENTRAL PARK</Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid xs={12} item>
             <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
               A lush green Central Park equipped with beautiful landscaped
               lawns.
@@ -135,27 +149,34 @@ export default function Amenities() {
         >
           <Grid
             xs={12}
+            container
             item
-            sx={{
-              display: "relative",
-              width: "100%",
-              height: "auto",
-            }}
+            sx={{ borderBottom: "1px solid #f5f4f4" }}
           >
-            <Image
-              style={{
+            <Grid
+              xs={12}
+              item
+              sx={{
+                display: "relative",
                 width: "100%",
                 height: "auto",
               }}
-              src={lifestyle3}
-              alt="lifestyle"
-              sizes="100wv"
-            />
+            >
+              <Image
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                src={lifestyle3}
+                alt="lifestyle"
+                sizes="100wv"
+              />
+            </Grid>
+            <Grid xs={12} item>
+              <Typography textAlign="center">URBANRISE GENIUS</Typography>
+            </Grid>
           </Grid>
           <Grid xs={12} item>
-            <Typography textAlign="center">URBANRISE GENIUS</Typography>
-          </Grid>
-          <Grid xs={12} items>
             <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
               Urbanrise Genius, offers coaching classes for academics and
               extracurricular activities.
@@ -171,27 +192,34 @@ export default function Amenities() {
         >
           <Grid
             xs={12}
+            container
             item
-            sx={{
-              display: "relative",
-              width: "100%",
-              height: "auto",
-            }}
+            sx={{ borderBottom: "1px solid #f5f4f4" }}
           >
-            <Image
-              style={{
+            <Grid
+              xs={12}
+              item
+              sx={{
+                display: "relative",
                 width: "100%",
                 height: "auto",
               }}
-              src={lifestyle4}
-              alt="lifestyle"
-              sizes="100wv"
-            />
+            >
+              <Image
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                src={lifestyle4}
+                alt="lifestyle"
+                sizes="100wv"
+              />
+            </Grid>
+            <Grid xs={12} item>
+              <Typography textAlign="center">CBSE SCHOOL</Typography>
+            </Grid>
           </Grid>
           <Grid xs={12} item>
-            <Typography textAlign="center">CBSE SCHOOL</Typography>
-          </Grid>
-          <Grid xs={12} items>
             <Typography textAlign="center" sx={{ color: "#6B6B6B" }}>
               Reputed CBSE school within the campus brings quality education at
               doorstep.

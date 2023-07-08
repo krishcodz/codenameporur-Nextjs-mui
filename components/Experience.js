@@ -9,7 +9,7 @@ export default function Experience() {
       sx={{
         backgroundColor: "#022546",
         color: "white",
-        padding: "40px 80px",
+        padding: { xs: "40px 20px", md: "20px 150px" },
       }}
     >
       <Grid
@@ -31,7 +31,9 @@ export default function Experience() {
         <Typography sx={{ color: "#FBB70F", fontSize: "30px" }}>
           Revolution One
         </Typography>
-        <Typography sx={{ fontSize: "15px", textAlign: "left" }}>
+        <Typography
+          sx={{ fontSize: "15px", textAlign: { xs: "center", md: "left" } }}
+        >
           Schedule an appointment for a free site visit to Code Name Newporur
         </Typography>
       </Grid>
@@ -92,7 +94,7 @@ export default function Experience() {
             id="outlined-basic"
             label="Enter Your Phone Number"
             variant="outlined"
-            type="number"
+            type="text"
             sx={{ backgroundColor: "white", borderRadius: "4px" }}
           />
         </Grid>

@@ -54,36 +54,24 @@ const Navbar = () => {
               onClose={handleMenuClose}
             >
               <MenuItem onClick={handleMenuClose}>
-                <Link href="/amenities" passHref>
-                  <IconButton color="inherit" aria-label="amenities">
-                    <SportsGolfIcon />
-                  </IconButton>
+                <Link href="#amenities" passHref>
+                  Amenities
                 </Link>
-                Amenities
               </MenuItem>
               <MenuItem onClick={handleMenuClose}>
-                <Link href="/gallery" passHref>
-                  <IconButton color="inherit" aria-label="gallery">
-                    <CollectionsIcon />
-                  </IconButton>
+                <Link href="#gallery" passHref>
+                  Gallery
                 </Link>
-                Gallery
               </MenuItem>
               <MenuItem onClick={handleMenuClose}>
                 <Link href="#about" passHref>
-                  <IconButton color="inherit" aria-label="about">
-                    <InfoIcon />
-                  </IconButton>
+                  About
                 </Link>
-                About
               </MenuItem>
               <MenuItem onClick={handleMenuClose}>
-                <Link href="/contact" passHref>
-                  <IconButton color="inherit" aria-label="contact">
-                    <MailIcon />
-                  </IconButton>
+                <Link href="#contact" passHref>
+                  Contact
                 </Link>
-                Contact
               </MenuItem>
               <MenuItem onClick={handleMenuClose}>
                 <Button
@@ -121,28 +109,16 @@ const Navbar = () => {
             <Box
               sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
             >
-              <Link href="/amenities" passHref style={{ marginRight: 15 }}>
-                <IconButton color="inherit" aria-label="amenities">
-                  <SportsGolfIcon />
-                </IconButton>
+              <Link href="#amenities" passHref style={{ marginRight: 15 }}>
                 Amenities
               </Link>
-              <Link href="/gallery" passHref style={{ marginRight: 15 }}>
-                <IconButton color="inherit" aria-label="gallery">
-                  <CollectionsIcon />
-                </IconButton>
+              <Link href="#gallery" passHref style={{ marginRight: 15 }}>
                 Gallery
               </Link>
               <Link href="#about" passHref style={{ marginRight: 15 }}>
-                <IconButton color="inherit" aria-label="about">
-                  <InfoIcon />
-                </IconButton>
                 About
               </Link>
-              <Link href="/contact" passHref style={{ marginRight: 15 }}>
-                <IconButton color="inherit" aria-label="contact">
-                  <MailIcon />
-                </IconButton>
+              <Link href="#contact" passHref style={{ marginRight: 15 }}>
                 Contact
               </Link>
               <Button
