@@ -9,6 +9,7 @@ import Location from "../components/Location";
 import Amenities from "../components/Amenities";
 import Experience from "../components/Experience";
 import Map from "../components/Map";
+import Price from "../components/Price";
 
 export default function Home() {
   return (
@@ -25,8 +26,9 @@ export default function Home() {
         <About />
         <Location />
         <Amenities />
-        <Experience />
         <Map />
+        <Experience />
+        <Price />
       </Grid>
     </>
   );

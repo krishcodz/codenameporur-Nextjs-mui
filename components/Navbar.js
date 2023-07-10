@@ -11,11 +11,6 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import MailIcon from "@mui/icons-material/Mail";
-import CollectionsIcon from "@mui/icons-material/Collections";
-import SportsGolfIcon from "@mui/icons-material/SportsGolf";
 import DownloadIcon from "@mui/icons-material/Download";
 
 import Image from "next/image";

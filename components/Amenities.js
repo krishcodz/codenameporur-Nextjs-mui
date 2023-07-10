@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, Divider } from "@mui/material";
 import Image from "next/image";
 import lifestyle1 from "../public/images/life-style-1.webp";
 import lifestyle2 from "../public/images/life-style-2.webp";
@@ -27,9 +27,7 @@ export default function Amenities() {
       >
         <Typography
           sx={{
-            textAlign: "center",
             fontSize: "22px",
-            borderBottom: "2px solid #ccc",
             width: "fit-content",
             letterSpacing: "3px",
             fontWeight: "bolder",
@@ -38,8 +36,8 @@ export default function Amenities() {
         >
           SEMMA LIFESTYLE
         </Typography>
+        <Divider sx={{ mt: 2, mb: 2, width: "10%" }}></Divider>
         <Typography
-          xs={4}
           sx={{
             paddingTop: "20px",
             textAlign: "center",

@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Divider } from "@mui/material";
 
 export default function About() {
   return (
@@ -19,13 +19,17 @@ export default function About() {
       <Grid
         item
         xs={12}
-        sx={{ display: "flex", justifyContent: "center", paddingY: "16px" }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          paddingY: "16px",
+        }}
       >
         <Typography
           sx={{
             textAlign: "center",
             fontSize: "22px",
-            borderBottom: "2px solid #ccc",
             letterSpacing: "3px",
             fontWeight: "bolder",
             color: "#3c3c3c",
@@ -33,6 +37,7 @@ export default function About() {
         >
           ABOUT PROJECT
         </Typography>
+        <Divider sx={{ mt: 2, mb: 5, width: "10%" }}></Divider>
       </Grid>
       <Grid item md={9} xs={11}>
         <Typography paragraph={true} sx={{ fontSize: "14px" }}>
