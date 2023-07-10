@@ -12,8 +12,8 @@ export default function Amenities() {
       container
       item
       sx={{
-        paddingY: "70px",
-        paddingX: "40px",
+        paddingY: { xs: "20px", md: "70px" },
+        paddingX: { xs: "10px", md: "40px" },
         backgroundColor: "white",
         color: "black",
       }}
@@ -51,13 +51,25 @@ export default function Amenities() {
           living with an array of amazing amenities
         </Typography>
       </Grid>
-      <Grid item container xs={12} sx={{ paddingY: "40px", paddingX: "80px" }}>
+      <Grid
+        item
+        container
+        xs={12}
+        sx={{
+          paddingY: { xs: "20px", md: "40px" },
+          paddingX: { xs: "20px", md: "80px" },
+        }}
+      >
         <Grid
           container
           item
           xs={12}
           md={3}
-          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+          sx={{
+            paddingX: { xs: "0px", md: "40px" },
+            paddingY: { xs: "30px", md: "40px" },
+            border: "1px solid #f5f4f4",
+          }}
         >
           <Grid
             xs={12}
@@ -100,7 +112,11 @@ export default function Amenities() {
           item
           xs={12}
           md={3}
-          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+          sx={{
+            paddingX: { xs: "0px", md: "40px" },
+            paddingY: { xs: "30px", md: "40px" },
+            border: "1px solid #f5f4f4",
+          }}
         >
           <Grid
             xs={12}
@@ -145,7 +161,11 @@ export default function Amenities() {
           item
           xs={12}
           md={3}
-          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+          sx={{
+            paddingX: { xs: "0px", md: "40px" },
+            paddingY: { xs: "30px", md: "40px" },
+            border: "1px solid #f5f4f4",
+          }}
         >
           <Grid
             xs={12}
@@ -188,7 +208,11 @@ export default function Amenities() {
           item
           xs={12}
           md={3}
-          sx={{ padding: "40px", border: "1px solid #f5f4f4" }}
+          sx={{
+            paddingX: { xs: "0px", md: "40px" },
+            paddingY: { xs: "30px", md: "40px" },
+            border: "1px solid #f5f4f4",
+          }}
         >
           <Grid
             xs={12}
