@@ -11,6 +11,8 @@ import Experience from "../components/Experience";
 import Map from "../components/Map";
 import Price from "../components/Price";
 import AboutEnd from "../components/AboutEnd";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
 
 export default function Home() {
   return (
@@ -29,8 +31,10 @@ export default function Home() {
         <Amenities />
         <Map />
         <Experience />
+        <Gallery />
         <Price />
         <AboutEnd />
+        <Footer />
       </Grid>
     </>
   );

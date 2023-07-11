@@ -28,6 +28,7 @@ export default function AboutEnd() {
             textDecoration: "none",
             borderBottom: "2px solid #000000",
           }}
+          href="/"
         >
           Read More
         </Link>

@@ -1,5 +1,5 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Experience() {
   return (
@@ -44,13 +44,16 @@ export default function Experience() {
         xs={12}
         md={4}
         justifyContent="center"
-        sx={{ paddingY: { xs: "10px", md: "0px" } }}
+        sx={{
+          paddingY: { xs: "10px", md: "0px" },
+          paddingRight: { xs: "0px", md: "20px" },
+        }}
       >
         <Grid
           item
           width="100%"
-          xs={10}
-          sx={{ paddingBottom: { xs: "20px", md: "60px" } }}
+          xs={12}
+          sx={{ paddingBottom: { xs: "20px", md: "20px" } }}
         >
           <TextField
             fullWidth
@@ -64,7 +67,7 @@ export default function Experience() {
             }}
           />
         </Grid>
-        <Grid item xs={10} width="100%">
+        <Grid item xs={12} width="100%">
           <TextField
             fullWidth
             id="outlined-basic"
@@ -81,13 +84,16 @@ export default function Experience() {
         xs={12}
         md={4}
         justifyContent="center"
-        sx={{ paddingY: { xs: "10px", md: "0px" } }}
+        sx={{
+          paddingY: { xs: "10px", md: "0px" },
+          paddingRight: { xs: "0px", md: "20px" },
+        }}
       >
         <Grid
           item
-          xs={10}
+          xs={12}
           width="100%"
-          sx={{ paddingBottom: { xs: "30px", md: "80px" } }}
+          sx={{ paddingBottom: { xs: "30px", md: "30px" } }}
         >
           <TextField
             fullWidth
@@ -98,9 +104,9 @@ export default function Experience() {
             sx={{ backgroundColor: "white", borderRadius: "4px" }}
           />
         </Grid>
-        <Grid item xs={10} width="100%" display="relative">
+        <Grid item xs={12} width="100%" display="relative">
           <Button
-            startIcon={<DownloadIcon />}
+            endIcon={<ArrowForwardIosIcon />}
             sx={{
               background: "#FBB70F",
               color: "white",
@@ -108,6 +114,7 @@ export default function Experience() {
               ":hover": {
                 background: "#FF9900",
               },
+              paddingY: "10px",
             }}
           >
             Submit
