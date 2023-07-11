@@ -5,7 +5,7 @@ import PodcastsIcon from "@mui/icons-material/Podcasts";
 
 export default function Footer() {
   return (
-    <Grid item container>
+    <Grid item container id="contact">
       <Grid
         item
         container

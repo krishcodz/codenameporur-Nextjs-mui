@@ -9,6 +9,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 export default function Amenities({ setOpenEnquiry }) {
   return (
     <Grid
+      id="amenities"
       container
       item
       sx={{

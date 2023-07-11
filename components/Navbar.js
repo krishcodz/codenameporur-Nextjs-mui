@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import {
+  Typography,
   AppBar,
   Toolbar,
   IconButton,
@@ -9,6 +9,7 @@ import {
   useMediaQuery,
   Menu,
   MenuItem,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -16,6 +17,14 @@ import Image from "next/image";
 import Logo from "../public/images/rOneLogo.jpeg";
 
 const Navbar = ({ setOpenEnquiry }) => {
+  const scrollToView = (target) => {
+    const section = document.querySelector(target);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    // if (isMobile === true) {
+    //   handleMenuClose();
+    // }
+  };
+
   const isMobile = useMediaQuery("(max-width:600px)");
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -32,7 +41,7 @@ const Navbar = ({ setOpenEnquiry }) => {
       position="fixed"
       sx={{ backgroundColor: "#f7f7f7", color: "black" }}
     >
-      <Toolbar>
+      <Toolbar sx={{ paddingY: "5px" }}>
         {isMobile ? (
           <>
             <IconButton
@@ -47,37 +56,45 @@ const Navbar = ({ setOpenEnquiry }) => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleMenuClose}>
-                <Link href="#amenities" passHref>
+              <MenuItem onClick={() => scrollToView("#amenities")}>
+                <Typography sx={{ ":hover": { cursor: "pointer" } }}>
                   Amenities
-                </Link>
+                </Typography>
               </MenuItem>
-              <MenuItem onClick={handleMenuClose}>
-                <Link href="#gallery" passHref>
+              <MenuItem onClick={() => scrollToView("#gallery")}>
+                <Typography sx={{ ":hover": { cursor: "pointer" } }}>
                   Gallery
-                </Link>
+                </Typography>
               </MenuItem>
-              <MenuItem onClick={handleMenuClose}>
-                <Link href="#about" passHref>
+              <MenuItem onClick={() => scrollToView("#about")}>
+                <Typography sx={{ ":hover": { cursor: "pointer" } }}>
                   About
-                </Link>
+                </Typography>
               </MenuItem>
-              <MenuItem onClick={handleMenuClose}>
-                <Link href="#contact" passHref>
+              <MenuItem onClick={() => scrollToView("#contact")}>
+                <Typography sx={{ ":hover": { cursor: "pointer" } }}>
                   Contact
-                </Link>
+                </Typography>
               </MenuItem>
-              <MenuItem onClick={handleMenuClose}>
+              <MenuItem>
                 <Button
+                  onClick={() => setOpenEnquiry(true)}
                   variant="contained"
                   startIcon={<DownloadIcon />}
-                  sx={{ width: "100%", marginTop: 2 }}
+                  sx={{
+                    width: "100%",
+                    marginTop: 2,
+                    background: "#FBB70F",
+                    ":hover": {
+                      background: "#FF9900",
+                    },
+                  }}
                 >
                   Enquire
                 </Button>
               </MenuItem>
             </Menu>
-            <Link href="/" passHref style={{ marginLeft: "35%" }}>
+            <Link href="/" style={{ marginLeft: "35%" }} passhref>
               <Image
                 src={Logo}
                 alt="logo"
@@ -90,7 +107,10 @@ const Navbar = ({ setOpenEnquiry }) => {
           </>
         ) : (
           <>
-            <Link href="/" passHref>
+            <Typography
+              onClick={() => scrollToView("#home")}
+              sx={{ ":hover": { cursor: "pointer" } }}
+            >
               <Image
                 src={Logo}
                 alt="logo"
@@ -99,22 +119,34 @@ const Navbar = ({ setOpenEnquiry }) => {
                   width: 70,
                 }}
               />
-            </Link>
+            </Typography>
             <Box
               sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
             >
-              <Link href="#amenities" passHref style={{ marginRight: 15 }}>
+              <Typography
+                onClick={() => scrollToView("#amenities")}
+                sx={{ marginRight: 2, ":hover": { cursor: "pointer" } }}
+              >
                 Amenities
-              </Link>
-              <Link href="#gallery" passHref style={{ marginRight: 15 }}>
+              </Typography>
+              <Typography
+                onClick={() => scrollToView("#gallery")}
+                sx={{ marginRight: 2, ":hover": { cursor: "pointer" } }}
+              >
                 Gallery
-              </Link>
-              <Link href="#about" passHref style={{ marginRight: 15 }}>
+              </Typography>
+              <Typography
+                onClick={() => scrollToView("#about")}
+                sx={{ marginRight: 2, ":hover": { cursor: "pointer" } }}
+              >
                 About
-              </Link>
-              <Link href="#contact" passHref style={{ marginRight: 15 }}>
+              </Typography>
+              <Typography
+                onClick={() => scrollToView("#contact")}
+                sx={{ marginRight: 2, ":hover": { cursor: "pointer" } }}
+              >
                 Contact
-              </Link>
+              </Typography>
               <Button
                 onClick={() => setOpenEnquiry(true)}
                 variant="contained"

@@ -159,7 +159,12 @@ export default function Header() {
   };
 
   return (
-    <Grid item container sx={{ marginTop: "60px", position: "relative" }}>
+    <Grid
+      id="home"
+      item
+      container
+      sx={{ marginTop: "60px", position: "relative" }}
+    >
       <Grid
         item
         xs={12}

@@ -216,6 +216,7 @@ export default function Gallery() {
   }, [sliderRef?.current?.width]);
   return (
     <Grid
+      id="gallery"
       container
       item
       xs={12}
