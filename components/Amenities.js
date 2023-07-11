@@ -6,7 +6,7 @@ import lifestyle3 from "../public/images/life-style-3.webp";
 import lifestyle4 from "../public/images/life-style-4.webp";
 import DownloadIcon from "@mui/icons-material/Download";
 
-export default function Amenities() {
+export default function Amenities({ setOpenEnquiry }) {
   return (
     <Grid
       container
@@ -253,6 +253,7 @@ export default function Amenities() {
         <Grid item>
           <Button
             startIcon={<DownloadIcon />}
+            onClick={() => setOpenEnquiry(true)}
             sx={{
               color: "white",
               backgroundColor: "#FBB70F",

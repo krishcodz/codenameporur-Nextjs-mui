@@ -12,11 +12,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
-
 import Image from "next/image";
 import Logo from "../public/images/rOneLogo.jpeg";
 
-const Navbar = () => {
+const Navbar = ({ setOpenEnquiry }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -117,6 +116,7 @@ const Navbar = () => {
                 Contact
               </Link>
               <Button
+                onClick={() => setOpenEnquiry(true)}
                 variant="contained"
                 startIcon={<DownloadIcon />}
                 sx={{

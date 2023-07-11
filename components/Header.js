@@ -3,7 +3,7 @@ import { Button, Divider, Grid, TextField, Typography } from "@mui/material";
 import bannermd from "../public/images/db.jpg";
 import bannerxs from "../public/images/mb.jpg";
 import Image from "next/image";
-// import { useAddFormDataMutation } from "../reduxSlice/apiSlice";
+import { useAddFormDataMutation } from "../reduxSlice/apiSlice";
 import { useSnackbar } from "notistack";
 import { useRouter } from "next/router";
 

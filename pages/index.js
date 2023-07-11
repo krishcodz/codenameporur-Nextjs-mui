@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -13,8 +14,10 @@ import Price from "../components/Price";
 import AboutEnd from "../components/AboutEnd";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
+import Popupenquire from "../components/Popupenquire";
 
 export default function Home() {
+  const [openEnquiry, setOpenEnquiry] = useState(false);
   return (
     <>
       <Head>
@@ -24,11 +27,15 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <Grid container>
-        <Navbar />
+        <Popupenquire
+          openEnquiry={openEnquiry}
+          setOpenEnquiry={setOpenEnquiry}
+        />
+        <Navbar setOpenEnquiry={setOpenEnquiry} />
         <Header />
         <About />
         <Location />
-        <Amenities />
+        <Amenities setOpenEnquiry={setOpenEnquiry} />
         <Map />
         <Experience />
         <Gallery />
