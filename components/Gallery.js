@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Grid, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button, Divider } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import Image from "next/image";
 import galImg1 from "../public/images/gal_1.jpg";
 import galImg2 from "../public/images/gal_2.jpg";
@@ -32,7 +34,7 @@ export default function Gallery() {
   const [slidesPerView, setSlidesPerView] = useState(3);
 
   useEffect(() => {
-    if (sliderRef.current.width <= 425) {
+    if (sliderRef.current.width <= 600) {
       setSlidesPerView(1);
     }
   }, [sliderRef?.current?.width]);
@@ -43,31 +45,29 @@ export default function Gallery() {
       xs={12}
       display="flex"
       justifyContent="center"
-      sx={{ background: "white" }}
+      sx={{ background: "white", padding: "40px" }}
     >
       <Grid
         item
         xs={12}
         sm={9}
         display="flex"
-        justifyContent="center"
+        flexDirection="column"
+        alignItems="center"
         style={{ padding: "20px 0" }}
       >
         <Typography
-          component="h1"
-          style={{
-            width: "32%",
-            textAlign: "center",
-            padding: "10px 0",
-            fontSize: "40px",
-            fontWeight: 400,
-            color: "#3a3a3c",
-            borderBottom: "2px solid #3a3a3c",
-            marginBottom: "25px",
+          sx={{
+            fontSize: "22px",
+            width: "fit-content",
+            letterSpacing: "3px",
+            fontWeight: "bolder",
+            color: "#3c3c3c",
           }}
         >
-          Gallery
+          SEMMA PROJECT
         </Typography>
+        <Divider sx={{ mt: 2, mb: 2, width: "10%" }}></Divider>
       </Grid>
       <Grid
         item
@@ -80,8 +80,10 @@ export default function Gallery() {
         sx={{ paddingTop: "50px" }}
       >
         <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
           slidesPerView={slidesPerView}
-          spaceBetween={30}
           onSlideChange={(swiper) => {
             const currIdx = swiper.activeIndex;
             setCurrentExpIdx(currIdx);
@@ -89,6 +91,18 @@ export default function Gallery() {
           onSwiper={(sw) => {
             sliderRef.current = sw;
           }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination]}
+          loop={true}
           className="mySwiper"
         >
           {(galleryImgList || []).map((item, index) => (
@@ -119,41 +133,6 @@ export default function Gallery() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Grid>
-      <Grid item xs={8} display="flex" justifyContent="center">
-        <Button
-          onClick={() => sliderRef?.current?.slidePrev()}
-          style={{
-            width: "50px",
-            height: "50px",
-            background: "#fff",
-            textTransform: "capitalize",
-            color: currentExpIdx === 0 ? "grey" : "#000000",
-            fontWeight: "bold",
-            fontSize: "60px",
-            boxShadow: "none",
-          }}
-          variant="contained"
-        >
-          ‹
-        </Button>
-        <Button
-          onClick={() => sliderRef?.current?.slideNext()}
-          disabled={currentExpIdx === 6}
-          style={{
-            width: "50px",
-            height: "50px",
-            background: "#fff",
-            textTransform: "capitalize",
-            color: currentExpIdx === 6 ? "grey" : "#000000",
-            fontWeight: "bold",
-            fontSize: "60px",
-            boxShadow: "none",
-          }}
-          variant="contained"
-        >
-          ›
-        </Button>
       </Grid>
     </Grid>
   );

@@ -21,7 +21,7 @@ export default function Home() {
         <title>Revolution One</title>
         <meta name="revolution one website" content="Reveolution One" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <Grid container>
         <Navbar />
