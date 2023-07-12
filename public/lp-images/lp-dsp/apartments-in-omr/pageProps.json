@@ -1,0 +1,13 @@
+{
+  "styleInfo": {
+    "sidebar": {
+      "backgroundColor": "rgb(56, 39, 6)",
+      "backgroundImage": "none"
+    },
+    "sidebarForm": {
+      "backgroundColor": "rgb(131, 78, 49)",
+      "backgroundImage": "none"
+    }
+  },
+  "noForm": true
+}

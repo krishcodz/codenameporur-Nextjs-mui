@@ -99,7 +99,7 @@ const getUtmParams = (pageQueryParams) => {
   };
 };
 
-export default function Header() {
+export default function Header({ lpImg, lpImgXs, lpImgSize, lpImgXsSize }) {
   // const [addFormData, { isLoading }] = useAddFormDataMutation();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -172,12 +172,17 @@ export default function Header() {
           position: "relative",
           zIndex: "1",
           display: { md: "flex", xs: "none" },
+          aspectRatio: lpImgSize.width / lpImgSize.height,
         }}
       >
         <Image
-          src={bannermd}
+          fill
+          src={lpImg || bannermd}
           alt="banner"
-          style={{ width: "100%", height: "auto" }}
+          style={{
+            objectFit: "contain",
+          }}
+          sizes="100vw"
         />
       </Grid>
       <Grid
@@ -187,12 +192,17 @@ export default function Header() {
           position: "relative",
           zIndex: "1",
           display: { md: "none", xs: "flex" },
+          aspectRatio: lpImgXsSize.width / lpImgXsSize.height,
         }}
       >
         <Image
-          src={bannerxs}
+          fill
+          src={lpImgXs || bannerxs}
           alt="banner"
-          style={{ width: "100%", height: "auto" }}
+          style={{
+            objectFit: "contain",
+          }}
+          sizes="100vw"
         />
       </Grid>
       <Grid

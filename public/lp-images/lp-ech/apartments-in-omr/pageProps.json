@@ -1,0 +1,14 @@
+{
+  "styleInfo": {
+    "sidebar": {
+      "backgroundColor": "rgb(108, 31, 86)",
+      "backgroundImage": "none"
+    },
+    "sidebarForm": {
+      "backgroundColor": "rgb(69, 0, 49)",
+      "backgroundImage": "none"
+    }
+  },
+  "noForm": false,
+  "phoneNo": "+91 7669353838"
+}
