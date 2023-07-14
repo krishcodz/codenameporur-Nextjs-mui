@@ -25,20 +25,27 @@ export default function Footer() {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={6} display="block">
-            <Image src={ublogo} alt="logo" width="100%" />
+          <Grid item xs={7} position="relative">
+            <Image
+              src={ublogo}
+              alt="logo"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+            <Typography
+              sx={{
+                textAlign: "center",
+                textDecoration: "none",
+                color: "#666666",
+                fontSize: "12px",
+                ":hover": { color: "red", fontWeight: "600" },
+              }}
+            >
+              An Alliance Group Company
+            </Typography>
           </Grid>
-
-          <Typography
-            sx={{
-              textDecoration: "none",
-              color: "#666666",
-              fontSize: "14px",
-              ":hover": { color: "red", fontWeight: "600" },
-            }}
-          >
-            An Alliance Group Company
-          </Typography>
         </Grid>
         <Grid item xs={12} md={5} sx={{ padding: "40px 60px" }}>
           <Typography sx={{ fontSize: "18px", color: "white" }}>
